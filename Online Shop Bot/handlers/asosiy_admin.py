@@ -31,7 +31,7 @@ class Asosiy(Filter):
     async def __call__(self, msg: Message):
         return msg.from_user.id == self.my_id
     
-ADMIN = 6611770508
+ADMIN = 'ADMIN_ID'
 
 @router_asosiy.message(CommandStart(), Asosiy(ADMIN))
 async def start(msg: Message):
